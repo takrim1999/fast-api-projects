@@ -1,5 +1,6 @@
-from enemy import Enemy
+from enemy import Zombie, Ogre
 
-enemy = Enemy()
-enemy.type_of_enemy = "Zombie"
-print()
+enemy1 = Zombie()
+enemy1.talk()
+enemy2 = Ogre()
+enemy2.talk()
