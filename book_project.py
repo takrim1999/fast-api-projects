@@ -4,11 +4,11 @@ from starlette.responses import JSONResponse
 app = FastAPI()
 
 BOOKS = [
-    {'title': "First Book", 'Author' : "First Author", 'Category' : "Zoology"},
-    {'title': "Second Book", 'Author': "Second Author", 'Category': "Chemistry"},
-    {'title': "Third Book", 'Author': "Third Author", 'Category': "Physics"},
-    {'title': "Fifth Book", 'Author': "Fifth Author", 'Category': "Math"},
-    {'title': "Sixth Book", 'Author': "Sixth Author", 'Category': "History"},
+    {'title': "First Book", 'author' : "First Author", 'category' : "Zoology"},
+    {'title': "Second Book", 'author': "Second Author", 'category': "Chemistry"},
+    {'title': "Third Book", 'author': "Third Author", 'category': "Physics"},
+    {'title': "Fifth Book", 'author': "Fifth Author", 'category': "Math"},
+    {'title': "Sixth Book", 'author': "Sixth Author", 'category': "History"},
 ]
 
 
