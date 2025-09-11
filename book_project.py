@@ -21,6 +21,8 @@ def books():
 
 @app.get("/books/{parameter}")
 def books(parameter):
-    param, data = parameter.split()
-    if BOOKS.
-    return JSONResponse({'Parameter' : parameter})
+    data = " ".join(parameter.split())
+    for i in BOOKS:
+        if i['title'].lower() == data:
+            out = i
+    return JSONResponse(out)
