@@ -11,8 +11,6 @@ BOOKS = [
     {'title': "Sixth Book", 'author': "Sixth Author", 'category': "History"},
 ]
 
-
-
 @app.get("/")
 def index():
     return {"Message":"Book Project Initialized"}
@@ -20,3 +18,9 @@ def index():
 @app.get("/books")
 def books():
     return JSONResponse(BOOKS)
+
+@app.get("/books/{parameter}")
+def books(parameter):
+    param, data = parameter.split()
+    if BOOKS.
+    return JSONResponse({'Parameter' : parameter})
