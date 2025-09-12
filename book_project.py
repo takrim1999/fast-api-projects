@@ -19,6 +19,26 @@ def index():
 def books():
     return JSONResponse(BOOKS)
 
+@app.get("/books/")
+def books(title=None,author=None,category=None):
+    out = None
+    if title:
+        for i in BOOKS:
+            if i['title'].lower() == title:
+                out = i
+    if author:
+        for i in BOOKS:
+            if i['author'].lower() == author:
+                out = i
+    if category:
+        for i in BOOKS:
+            if i['category'].lower() == category:
+                out = i
+    if out:
+        return JSONResponse(out)
+    else:
+        return JSONResponse(BOOKS)
+
 @app.get("/books/{parameter}")
 def books(parameter):
     data = " ".join(parameter.split())
